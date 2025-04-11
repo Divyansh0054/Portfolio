@@ -335,12 +335,13 @@
             <h2 class="connect-title">Let's Connect</h2>
             <p class="connect-subtitle">Feel free to reach out for collaborations, projects, or just to say hi!</p>
 
-            <form class="connect-form" action="mailto:divyanshsharma@gmail.com" method="POST" enctype="text/plain">
-                <input type="text" name="name" placeholder="Your Name" required />
-                <input type="email" name="email" placeholder="Your Email" required />
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <form class="connect-form" onsubmit="openGmail(event)">
+                <input type="text" id="name" name="name" placeholder="Your Name" required />
+                <input type="email" id="email" name="email" placeholder="Your Email" required />
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
+            
 
             <div class="connect-socials">
                 <a href="https://linkedin.com/in/Divyansh Sharma" target="_blank">LinkedIn</a>
