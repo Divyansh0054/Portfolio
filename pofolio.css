@@ -9,6 +9,7 @@ Global Styles * {
 body {
     background-color: black;
     color: white;
+    overflow-x: hidden;
 }
 
 a {
@@ -29,15 +30,18 @@ a {
     top: 0;
     padding: 8px 10px;
     z-index: 4;
-    margin: 20px;
+    margin: 0 auto;
+    max-width: 100%;
+    box-sizing: border-box;
     /* margin-top: 20px; */
 }
 
 .nav-links {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
-    margin-right: 20px;
+    box-sizing: border-box;
     /* align-items: center; */
 }
 
@@ -48,8 +52,20 @@ a {
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    text-align: center;
 }
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
 
+    .nav-link {
+        padding: 8px 0;
+    }
+}
 html {
     scroll-behavior: smooth;
 }
